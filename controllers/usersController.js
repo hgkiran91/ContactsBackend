@@ -63,7 +63,7 @@ const loginUser = expressAsyncHandler(async (req, res) => {
             }
         },
             process.env.ACCESS_SECRET_TOKEN,
-            { expiresIn: "2m" }
+            { expiresIn: "15m" }
         )
         res.status(Response.Status.OK).json({ message: "User Login Successfully.👍", accessToken, result: true, data: user });
     } else {
