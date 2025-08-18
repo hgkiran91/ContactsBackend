@@ -12,10 +12,11 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 app.use(errorHandler);
 app.use(cors());
+app.use(express.static('contacts-frontend'));
 
 // app.use are known as middlewares
-app.use('/api/v1/contacts', require("./routes/contactsroutes"));
-app.use('/api/v1/users', require("./routes/usersRoutes"));
+app.use('/api/v1', require("./routes/contactsroutes"));
+app.use('/api/v1', require("./routes/usersRoutes"));
 
 app.listen(port, () => {
     console.log("Server connected successfully!👏");

@@ -6,14 +6,14 @@ const validateToken = require("../middleware/validateTokenHandler");
 
 // router.use(validateToken); // One of the way if you are validating for all the routes
 
-router.get('/', validateToken, getContacts);
+router.get('/contacts/', validateToken, getContacts);
 
-router.post('/create', validateToken, createContacts);
+router.post('/contacts/create', validateToken, createContacts);
 
-router.get('/:id', validateToken, getContactById);
+router.get('/contacts/:id', validateToken, getContactById);
 
-router.put('/:id', validateToken, updateContactById); 
+router.put('/contacts/:id', validateToken, updateContactById); 
 
-router.delete('/:id', validateToken, deleteContactById);
+router.delete('/contacts/:id', validateToken, deleteContactById);
 
 module.exports = router;
