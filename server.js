@@ -14,7 +14,7 @@ app.use(errorHandler);
 app.use(cors());
 
 // app.use are known as middlewares
-app.use('/api/v1', require("./routes/contactsroutes"));
+app.use('/api/v1', require("./routes/contactsRoutes"));
 app.use('/api/v1', require("./routes/usersRoutes"));
 
 app.listen(port, () => {
