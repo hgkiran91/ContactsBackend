@@ -22,7 +22,7 @@ const dotenv = require("dotenv").config();
 
 const sequelize = new Sequelize('mycontacts', process.env.DB_USER, process.env.DB_PASSWORD,
     {
-        host: 'localhost',
+        host: process.env.DB_HOST,
         dialect: 'mysql',
     }
 );
