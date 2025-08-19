@@ -18,7 +18,9 @@
 // module.exports = connection;
 
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('mycontacts', 'root', 'HG91@bubbly',
+const dotenv = require("dotenv").config();
+
+const sequelize = new Sequelize('mycontacts', process.env.DB_USER, process.env.DB_PASSWORD,
     {
         host: 'localhost',
         dialect: 'mysql',
